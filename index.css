@@ -1,0 +1,141 @@
+:root {
+  --primary-color: rgb(83, 49, 156);
+  --secondary-color: rgb(200, 175, 255);
+  --lighter-color: rgb(233, 223, 255);
+  --dark-grey: rgb(44, 44, 44);
+}
+body {
+  background-color: var(--lighter-color);
+  font-family: 'Open Sans', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 32px;
+  color: var(--dark-grey);
+}
+
+h1 {
+  color: var(--primary-color);
+}
+
+.container {
+  background-color: white;
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  padding: 0 64px 64px 64px;
+  position: relative;
+}
+
+.tabs {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--secondary-color);
+  margin: 0 0 32px 0;
+  padding: 16px;
+}
+
+.tabs p {
+  padding: 8px;
+}
+
+.tabs p:hover {
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+.tabs .active {
+  color: var(--primary-color);
+  position: relative;
+}
+
+.tabs .active::before {
+  content: '';
+  background-color: var(--primary-color);
+  width: 200%;
+  height: 4px;
+  position: absolute;
+  bottom: -32px;
+  left: -50%;
+  z-index: 2;
+  border-radius: 10px;
+}
+
+.line {
+  height: 3px;
+  background-color: rgb(231, 231, 231);
+  width: 100%;
+  position: absolute;
+  top: 98px;
+}
+
+.toggle-wrapper {
+  display: flex;
+}
+
+.toggle-wrapper img {
+  height: 40px;
+  margin: 0 16px;
+}
+
+.toggle {
+  background-color: var(--primary-color);
+  height: 32px;
+  width: 140px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 4px 0 16px;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+  box-sizing: border-box;
+}
+
+.toggle span:first-of-type {
+  color: white;
+}
+
+.toggle span:last-of-type {
+  color: var(--primary-color);
+  background-color: white;
+  padding: 4px 16px;
+  border-radius: 20px;
+}
+
+.sessions-card {
+  background-color: rgb(250, 247, 255);
+  text-align: center;
+  padding: 32px;
+  width: 50%;
+  text-transform: uppercase;
+  margin: 16px 0;
+  border-radius: 10px;
+}
+
+.sessions-card p {
+  color: var(--dark-grey);
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.sessions-card .number {
+  color: var(--primary-color);
+  font-size: 56px;
+  margin: 0;
+}
+
+.description {
+  line-height: 32px;
+  margin: 16px 0 32px 0;
+}
